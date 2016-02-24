@@ -1,11 +1,42 @@
-﻿ul.nav{
-    display:block;
-    float:left;
+﻿ul{
+    list-style-type:none;
+    align-self:center;
 }
 
-ul{
-    list-style-type:none;
+a{
+    text-decoration:none;
 }
+
+
+
+
+ul li{
+    float:left;
+    margin-left:2px;
+}
+
+ul li a{
+    text-transform:uppercase;
+}
+
+
+
+
+ul.nav{
+    display:block;
+}
+
+a.nav{
+    color:blueviolet;
+    font-weight:bold;
+}
+
+li.nav{
+    background-color:gray;
+}
+
+
+
 
 .clickable{
     cursor:pointer;
@@ -15,4 +46,7 @@ ul{
     margin:5px 5px 5px 5px;
 }
 
+.minInerSpace{
+    padding:5px;
+}
 
