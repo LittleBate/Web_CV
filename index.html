@@ -56,12 +56,29 @@
         #competencesContent li {
             display: inline;
             color: white;
+            cursor:pointer;
+        }
+
+        #competencesContent li:hover{
+            background-color:darkgray;
         }
 
             #competencesContent li > div {
                 margin-right: 0.5rem;
-                width: 5rem;
-                display: inline;
+                min-width: 5rem;
+                display: inline-block;
+                vertical-align:central;
+                height:2.2rem;
+                margin-top:0.3rem;
+            }
+
+            #competencesContent li > div > div{
+                background-color:white;
+                margin-right:1rem;
+                width:1rem;
+                height:1rem;
+                box-sizing:border-box;
+                display:inline-block;
             }
 
         #competencesContent ul {
@@ -85,25 +102,25 @@
     <div id="competencesContent">
         <div>
             <ul>
-                <li><div><a>C#</a></div></li>
-                <li><div><a>C++</a></div></li>
-                <li><div><a>Java</a></div></li>
-                <li><div><a>C</a></div></li>
-                <li><div><a>Python</a></div></li>
-                <li><div><a>HTML</a></div></li>
-                <li><div><a>CSS</a></div></li>
-                <li><div><a>JavaScript</a></div></li>
-                <li><div><a>WPF</a></div></li>
-                <li><div><a>XML</a></div></li>
-                <li><div><a>JSON</a></div></li>
-                <li><div><a>SQL</a></div></li>
-                <li><div><a>Android</a></div></li>
-                <li><div><a>IOS</a></div></li>
-                <li><div><a>Windows Phone</a></div></li>
-                <li><div><a>Ionic</a></div></li>
-                <li><div><a>REST</a></div></li>
-                <li><div><a>OAUTH / OAUTH2</a></div></li>
-                <li><div><a>Bootsrap</a></div></li>
+                <li><div><div></div><a>C#</a></div></li>
+                <li><div><div></div><a>C++</a></div></li>
+                <li><div><div></div><a>Java</a></div></li>
+                <li><div><div></div><a>C</a></div></li>
+                <li><div><div></div><a>Python</a></div></li>
+                <li><div><div></div><a>HTML</a></div></li>
+                <li><div><div></div><a>CSS</a></div></li>
+                <li><div><div></div><a>JavaScript</a></div></li>
+                <li><div><div></div><a>WPF</a></div></li>
+                <li><div><div></div><a>XML</a></div></li>
+                <li><div><div></div><a>JSON</a></div></li>
+                <li><div><div></div><a>SQL</a></div></li>
+                <li><div><div></div><a>Android</a></div></li>
+                <li><div><div></div><a>IOS</a></div></li>
+                <li><div><div></div><a>Windows Phone</a></div></li>
+                <li><div><div></div><a>Ionic</a></div></li>
+                <li><div><div></div><a>REST</a></div></li>
+                <li><div><div></div><a>OAUTH / OAUTH2</a></div></li>
+                <li><div><div></div><a>Bootsrap</a></div></li>
             </ul>
         </div>
 
