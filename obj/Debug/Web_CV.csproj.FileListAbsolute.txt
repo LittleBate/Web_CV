@@ -1,0 +1,6 @@
+C:\Users\Bate\Documents\GitHub\Web_CV\Web_CV\bin\Web_CV.dll.config
+C:\Users\Bate\Documents\GitHub\Web_CV\Web_CV\bin\Web_CV.dll
+C:\Users\Bate\Documents\GitHub\Web_CV\Web_CV\bin\Web_CV.pdb
+C:\Users\Bate\Documents\GitHub\Web_CV\Web_CV\obj\Debug\Web_CV.csprojResolveAssemblyReference.cache
+C:\Users\Bate\Documents\GitHub\Web_CV\Web_CV\obj\Debug\Web_CV.dll
+C:\Users\Bate\Documents\GitHub\Web_CV\Web_CV\obj\Debug\Web_CV.pdb
