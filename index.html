@@ -3,14 +3,114 @@
 <head>
     <link href="Style/BasicStyles.css" rel="stylesheet" />
     <title>My CV</title>
+    <style>
+        html {
+            font-size: 16px;
+            font-family: Verdana;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            text-align: center;
+            background-color: lightblue;
+            width: 100%;
+            height: 5rem;
+            /*z-index:10;*/
+        }
+
+            nav > ul > li {
+                display: inline;
+                cursor: pointer;
+                margin-right: 0.50rem;
+                background-color: lightgray;
+                padding: 0.75rem;
+                font-weight: bold;
+            }
+
+                nav > ul > li:last-child {
+                    margin-right: 0;
+                }
+
+                nav > ul > li > a {
+                    color: darkblue;
+                }
+
+        body > div {
+            background-color: black;
+            color: white;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            position: fixed;
+        }
+
+        #competencesContent li {
+            display: inline;
+            color: white;
+        }
+
+            #competencesContent li > div {
+                margin-right: 0.5rem;
+                width: 5rem;
+                display: inline;
+            }
+
+        #competencesContent ul {
+            text-align: left;
+            width: 60%;
+            margin-left: 20%;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <ul class="nav minSpace">
-            <li class="minInerSpace clickable nav"><a class="nav" href="#">Chronologie</a></li>
-            <li class="minInerSpace clickable nav"><a class="nav" href="#">Compétences</a></li>
-            <li class="minInerSpace clickable nav"><a class="nav" href="#">Classique</a></li>
+    <nav id="header">
+        <ul>
+            <li><a href="#">Chronologie</a></li>
+            <li><a href="#">Compétences</a></li>
+            <li><a href="#">Classique</a></li>
         </ul>
+    </nav>
+    <div id="chronoligiqueContent">
+
     </div>
+    <div id="competencesContent">
+        <div>
+            <ul>
+                <li><div><a>C#</a></div></li>
+                <li><div><a>C++</a></div></li>
+                <li><div><a>Java</a></div></li>
+                <li><div><a>C</a></div></li>
+                <li><div><a>Python</a></div></li>
+                <li><div><a>HTML</a></div></li>
+                <li><div><a>CSS</a></div></li>
+                <li><div><a>JavaScript</a></div></li>
+                <li><div><a>WPF</a></div></li>
+                <li><div><a>XML</a></div></li>
+                <li><div><a>JSON</a></div></li>
+                <li><div><a>SQL</a></div></li>
+                <li><div><a>Android</a></div></li>
+                <li><div><a>IOS</a></div></li>
+                <li><div><a>Windows Phone</a></div></li>
+                <li><div><a>Ionic</a></div></li>
+                <li><div><a>REST</a></div></li>
+                <li><div><a>OAUTH / OAUTH2</a></div></li>
+                <li><div><a>Bootsrap</a></div></li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="classiqueContet">
+
+    </div>
+    <footer id="footer"></footer>
 </body>
 </html>
