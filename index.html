@@ -7,6 +7,11 @@
         html {
             font-size: 16px;
             font-family: Verdana;
+            background-image: url(wallhaven-43284.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color:white;
         }
 
         body {
@@ -14,11 +19,28 @@
             padding: 0;
         }
 
+        header {
+            text-align:center;
+            /*background-color: lightblue;*/
+        }
+
+            header > div > div {
+                margin-right:7rem;
+                vertical-align:top;
+            }
+
+            header > div > div:last-child{
+                margin-right:0;
+            }
+
+            header > div p {
+                text-align:left;
+            }
+
         nav {
             text-align: center;
-            background-color: lightblue;
             width: 100%;
-            height: 5rem;
+            height: 4rem;
             /*z-index:10;*/
         }
 
@@ -29,6 +51,7 @@
                 background-color: lightgray;
                 padding: 0.75rem;
                 font-weight: bold;
+                vertical-align: middle;
             }
 
                 nav > ul > li:last-child {
@@ -40,9 +63,6 @@
                 }
 
         body > div {
-            background-color: black;
-            color: white;
-            position: relative;
         }
 
         a {
@@ -50,62 +70,93 @@
         }
 
         #header {
-            position: fixed;
         }
 
-        #competencesContent > div{
-            padding:0.1rem;
+        #competencesContent > div {
+            padding: 0.1rem;
         }
 
         #competencesContent li {
             display: inline;
-            color: white;
-            cursor:pointer;
-            padding:0.3rem;
+            cursor: pointer;
+            padding: 0.3rem;
         }
 
-        #competencesContent li:hover{
-            background-color:darkgray;
-        }
+            #competencesContent li:hover {
+                background-color: darkgray;
+            }
 
             #competencesContent li > div {
                 min-width: 5rem;
                 display: inline-block;
-                margin:0.3rem;
+                margin: 0.3rem;
             }
 
-            #competencesContent li > div > div{
-                background-color:white;
-                margin-right:1rem;
-                width:1rem;
-                height:1rem;
-                display:inline-block;
-                vertical-align:middle;
-            }
-
-                #competencesContent li > div > div > a{
-                    vertical-align:middle;
+                #competencesContent li > div > div {
+                    background-color: white;
+                    margin-right: 1rem;
+                    width: 1rem;
+                    height: 1rem;
+                    display: inline-block;
+                    vertical-align: middle;
                 }
+
+                    #competencesContent li > div > div > a {
+                        vertical-align: middle;
+                    }
 
         #competencesContent ul {
             text-align: left;
             width: 60%;
             margin-left: 20%;
         }
+
+        .transparent
+		{
+			background-color:rgba(0, 0, 0, 0.5);
+		}
+
+        div.inlineBlock{
+            display:inline-block;
+        }
+
     </style>
 </head>
 <body>
-    <nav id="header">
-        <ul>
-            <li><a href="#">Chronologie</a></li>
-            <li><a href="#">Compétences</a></li>
-            <li><a href="#">Classique</a></li>
-        </ul>
-    </nav>
-    <div id="chronoligiqueContent">
+    <header>
+        <div class="transparent">
+            <div class="inlineBlock">
+                <p>M. Guillaume PLUVY</p>
+                <p>Tel. : 06-16-56-00-16</p>
+                <p>guillaume.pluvy@gmail.com</p>
+            </div>
+            <div class="inlineBlock">
+                <p>57 Route de St Martin</p>
+                <p>42800 </p>
+                <p>SAINT MARTIN LA PLAINE</p>
+            </div>
+            <div class="inlineBlock">
+                <p>Age : 24 ans</p>
+                <p>Permis B</p>
+                <p>Possède une voiture</p>
+            </div>
+        </div>
 
-    </div>
-    <div id="competencesContent">
+        <nav id="header" class="transparent">
+            <ul>
+                <li><a href="#">Chronologie</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Classique</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!--<div id="chronoligiqueContent">
+
+    </div>-->
+    <div id="competencesContent" class="transparent">
         <div>
             <ul>
                 <li><div><div></div><a>C#</a></div></li>
@@ -131,9 +182,11 @@
         </div>
 
     </div>
-    <div id="classiqueContet">
+    <!--<div id="classiqueContet">
 
-    </div>
-    <footer id="footer"></footer>
+    </div>-->
+    <footer id="footer">
+        test
+    </footer>
 </body>
 </html>
