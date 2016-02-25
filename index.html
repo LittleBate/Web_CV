@@ -53,10 +53,15 @@
             position: fixed;
         }
 
+        #competencesContent > div{
+            padding:0.1rem;
+        }
+
         #competencesContent li {
             display: inline;
             color: white;
             cursor:pointer;
+            padding:0.3rem;
         }
 
         #competencesContent li:hover{
@@ -64,12 +69,9 @@
         }
 
             #competencesContent li > div {
-                margin-right: 0.5rem;
                 min-width: 5rem;
                 display: inline-block;
-                vertical-align:central;
-                height:2.2rem;
-                margin-top:0.3rem;
+                margin:0.3rem;
             }
 
             #competencesContent li > div > div{
@@ -77,9 +79,13 @@
                 margin-right:1rem;
                 width:1rem;
                 height:1rem;
-                box-sizing:border-box;
                 display:inline-block;
+                vertical-align:middle;
             }
+
+                #competencesContent li > div > div > a{
+                    vertical-align:middle;
+                }
 
         #competencesContent ul {
             text-align: left;
