@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link href="Style/BasicStyles.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="Js/mainController.js"></script>
     <title>My CV</title>
     <style>
         html {
@@ -143,7 +145,7 @@
         }
     </style>
 </head>
-<body>
+<body ng-app="webCvApp" ng-controller="webCvController">
     <header>
         <nav id="header" class="maxWidth">
             <ul>
@@ -195,25 +197,7 @@
         <div class="transparent maxWidth centerContent">
             <div class="centerDisplay">
                 <ul>
-                    <li><div><div></div><a>C#</a></div></li>
-                    <li><div><div></div><a>C++</a></div></li>
-                    <li><div><div></div><a>Java</a></div></li>
-                    <li><div><div></div><a>C</a></div></li>
-                    <li><div><div></div><a>Python</a></div></li>
-                    <li><div><div></div><a>HTML</a></div></li>
-                    <li><div><div></div><a>CSS</a></div></li>
-                    <li><div><div></div><a>JavaScript</a></div></li>
-                    <li><div><div></div><a>WPF</a></div></li>
-                    <li><div><div></div><a>XML</a></div></li>
-                    <li><div><div></div><a>JSON</a></div></li>
-                    <li><div><div></div><a>SQL</a></div></li>
-                    <li><div><div></div><a>Android</a></div></li>
-                    <li><div><div></div><a>IOS</a></div></li>
-                    <li><div><div></div><a>Windows Phone</a></div></li>
-                    <li><div><div></div><a>Ionic</a></div></li>
-                    <li><div><div></div><a>REST</a></div></li>
-                    <li><div><div></div><a>OAUTH / OAUTH2</a></div></li>
-                    <li><div><div></div><a>Bootsrap</a></div></li>
+                    <li ng-repeat="comp in listeCompetences"><div><div></div><a>{{comp.nom}}</a></div></li>
                 </ul>
             </div>
         </div>
