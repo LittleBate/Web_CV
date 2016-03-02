@@ -46,6 +46,40 @@ app.controller('webCvController', function ($scope) {
         { id: 2016 }
     ]
 
+    $scope.Experience = [
+        {
+            id: 0, libelle: "", lieu: "", mission: "", listeCompetence: [
+                { type: 0, liste: [] }
+            ]
+        }, 
+        {
+            id: 1, libelle: "Employé à ESABORA", lieu: "St Etienne (42)", mission: "Déeloppement d'une application (client - serveur) de gestion", listeCompetence: [
+              { type: 0, liste: [0, 8, 11] },
+              { type: 1, liste: [1] },
+              { type: 3, liste: [0]}
+            ]
+        },
+        {
+            id: 2, libelle: "Stage DUT à ESABORA", lieu: " St Etienne (42)", mission: "Développement de la version mobile (tablette tactile) d’une application de CAO.", listeCompetence: [
+                { type: 0, liste: [] }
+            ]
+        },
+        {
+            id: 3, libelle: "Stage informatique à la SNCF", lieu: "Oullins (69)", mission: "Développement d'une application de gestion de ticket en intranet. ", listeCompetence: [
+                { type: 0, liste: [] }
+            ]
+        },
+        {
+            id: 4, libelle: "Employé au Conseil Général de la Loire", lieu: "ST Etienne (42)", mission: "Archivage ", listeCompetence: [
+                { type: 0, liste: [] }
+            ]
+        }
+    ];
+
+    $scope.activites = [
+        { id: 0, libelle: "Basket" },
+        { id: 1, libelle: "Lectuer (BD)"}
+    ];
 
     $scope.listeCompetences = [
         {
@@ -72,35 +106,41 @@ app.controller('webCvController', function ($scope) {
                 { id: 18, nom: "Boottrap", niveau: 3 }]
         },
         {
-            id: 0, nom: "Méthodologies et langages",
+            id: 1, nom: "Méthodologies et langages",
             competences:
                 [{ id: 0, nom: "Design Pattern", niveau: 4 },
                 { id: 1, nom: "MVVM", niveau: 3 },
-                { id: 2, nom: "MVC", niveau: 4 }]
+                { id: 2, nom: "Merise", niveau: 3 },
+                { id: 3, nom: "UML", niveau: 3 },
+                { id: 4, nom: "Analyse", niveau: 3 },
+                { id: 5, nom: "MVC", niveau: 4 }]
         },
         {
-            id: 0, nom: "Outils de génie logiciel",
+            id: 2, nom: "Outils de génie logiciel",
             competences:
                 [{ id: 0, nom: "Visual Studio", niveau: 4 },
                 { id: 1, nom: "Eclipse", niveau: 3 },
-                { id: 2, nom: "Vim", niveau: 4 } ]
+                { id: 2, nom: "Maple", niveau: 3 },
+                { id: 3, nom: "Netbeans", niveau: 3 },
+                { id: 5, nom: "Vim", niveau: 4 } ]
         },
         {
-            id: 0, nom: "Base de données",
+            id: 3, nom: "Base de données",
             competences:
-                [{ id: 0, nom: "SQL", niveau: 4 },
+                [{ id: 0, nom: "Oracle", niveau: 4 },
                 { id: 1, nom: "MySql", niveau: 3 },
                 { id: 2, nom: "SQLLight", niveau: 4 },
-                { id: 3, nom: "MongoDB", niveau: 3 }]
+                { id: 3, nom: "SQL Server", niveau: 4 },
+                { id: 4, nom: "MongoDB", niveau: 3 }]
         },
         {
-            id: 0, nom: "OS et Réseaux",
+            id: 4, nom: "OS et Réseaux",
             competences:
                 [{ id: 0, nom: "Windows", niveau: 4 },
                 { id: 1, nom: "Linux", niveau: 3 }]
         },
         {
-            id: 0, nom: "Général",
+            id: 5, nom: "Général",
             competences:
                 [{ id: 0, nom: "Anglais", niveau: 4 },
                 { id: 1, nom: "Communication", niveau: 3 }]
