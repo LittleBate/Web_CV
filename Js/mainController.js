@@ -6,7 +6,7 @@ app.controller('webCvController', function ($scope) {
     $scope.mail = "guillaume.pluvy@gmail.com";
     $scope.adresse = "57 Route de St Martin";
     $scope.codePostal = "42800";
-    $scope.ville = "St Martin la Plaine";
+    $scope.ville = "ST MARTIN LA PLAINE";
     $scope.age = "24 ans";
     $scope.permis = "Permis B";
     $scope.voiture = "Possède un voiture";
@@ -18,13 +18,13 @@ app.controller('webCvController', function ($scope) {
         { id: 2, nom: "Classique" }
     ];
 
-    $scope.selectedPage = 0;
+    $scope.idSelectedPage = 0;
 
-    $scope.selectedCompetence = 0;
+    $scope.idSelectedCompetence = 0;
 
-    $scope.selectedTypeCompetence = 0;
+    $scope.idSelectedTypeCompetence = 0;
 
-    $scope.selectedAnnee = 0;
+    $scope.isSelectedAnnee = 0;
 
     $scope.annees = [
         { id: 2000 },

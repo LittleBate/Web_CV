@@ -1,4 +1,153 @@
 ﻿/*
+
+ rgb(42, 30, 22)
+ rgb(222, 205, 194)
+ rgb(115, 89, 80)
+ rgb(78, 60, 47)
+ rgb(67, 60, 54)
+ rgb(140, 134, 144)
+ rgb(148, 148, 140)
+ rgb(92, 92, 96)
+ rgb(88, 80, 88)
+
+
+
+    
+    <style>
+
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            text-align: center;
+            height: 4rem;
+            position: fixed;
+            background-color: black;
+        }
+
+            nav > ul > li {
+                display: inline;
+                cursor: pointer;
+                margin-right: 0.50rem;
+                background-color: rgb(222, 205, 194);
+                padding: 0.75rem;
+                font-weight: bold;
+                vertical-align: middle;
+            }
+
+                nav > ul > li:last-child {
+                    margin-right: 0;
+                }
+
+                nav > ul > li > a {
+                    color: rgb(42, 30, 22);
+                }
+
+        body > div {
+        }
+
+            body > div > div {
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+        #infoGeneral {
+            text-align: center;
+        }
+
+            #infoGeneral > div > div {
+                margin-right: 7rem;
+                vertical-align: top;
+            }
+
+                #infoGeneral > div > div:last-child {
+                    margin-right: 0;
+                }
+
+                #infoGeneral > div p {
+                    text-align: left;
+                }
+
+        #fakeHeader {
+            height: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        #competencesContent {
+            text-align: center;
+        }
+
+            #competencesContent > div {
+                padding: 0.1rem;
+                display: inline-block;
+            }
+
+            #competencesContent li {
+                display: inline;
+                cursor: pointer;
+                padding: 0.3rem;
+            }
+
+                #competencesContent li:hover {
+                    background-color: rgb(78, 60, 47);
+                }
+
+                #competencesContent li > div {
+                    min-width: 5rem;
+                    display: inline-block;
+                    margin: 0.3rem;
+                }
+
+                    #competencesContent li > div > div {
+                        background-color: white;
+                        margin-right: 1rem;
+                        width: 1rem;
+                        height: 1rem;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                        #competencesContent li > div > div > a {
+                            vertical-align: middle;
+                        }
+
+            #competencesContent ul {
+                text-align: left;
+            }
+
+
+        .maxWidth {
+            width: 100%;
+        }
+
+        div.centerDisplay {
+            display: inline-block;
+            width: 60%;
+        }
+
+        div.centerContent {
+            text-align: center;
+        }
+
+        div.inlineBlock {
+            display: inline-block;
+        }
+
+        .active{
+
+        }
+    </style>
+
+
+
+
+
+
 ul{
     list-style-type:none;
     align-self:center;
