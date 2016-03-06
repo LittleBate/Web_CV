@@ -24,6 +24,14 @@ app.controller('webCvController', function ($scope) {
 
     $scope.idSelectedTypeCompetence = 0;
 
+    function IsSelectedType($scope, typeId) {
+        return typeId == $scope.idSelectedTypeCompetence;
+    }
+
+    function Select($scope, typeId) {
+        $scope.idSelectedTypeCompetence = typeId;
+    }
+
     $scope.isSelectedAnnee = 0;
 
     $scope.annees = [

@@ -49,29 +49,29 @@
             display: inline-block;
         }
 
-        nav{
-            text-align:center;
-            padding:0.5rem;
-            background-color:black;
+        nav {
+            text-align: center;
+            padding: 0.5rem;
+            background-color: black;
         }
 
-        .nav-pills > li.active > a{
-            color:rgb(42, 30, 22);
-            background-color:rgb(222, 205, 194);
+        .nav-pills > li.active > a {
+            color: rgb(42, 30, 22);
+            background-color: rgb(222, 205, 194);
         }
 
-        a{
-            color:rgb(222, 205, 194);
+        a {
+            color: rgb(222, 205, 194);
         }
 
-        .nav-pills > li > a:hover{
-            background-color:rgb(92, 92, 96);
-            color:rgb(222, 205, 194);
+        .nav-pills > li > a:hover {
+            background-color: rgb(92, 92, 96);
+            color: rgb(222, 205, 194);
         }
 
-        .nav-pills > li.active > a:hover{
-            background-color:rgb(92, 92, 96);
-            color:rgb(222, 205, 194);
+        .nav-pills > li.active > a:hover {
+            background-color: rgb(92, 92, 96);
+            color: rgb(222, 205, 194);
         }
     </style>
 
@@ -115,11 +115,25 @@
         </div>-->
         <div>
             <div class="transparent">
-                <div class="container">
-                    <ul ng-repeat="comp in listeCompetences">
-                        <li><a href="#">{{comp.nom}}</a>
-                        <li />
-                    </ul>
+                <div class="container raw">
+                    <div class="col-md-3 transparent">
+                        <ul ng-repeat="comp in listeCompetences">
+                            <li>
+                                <div>
+                                    <a ng-click="SelectType(comp.id)">{{comp.nom}}</a>
+                                    <ul ng-show="IsSelectedType(comp.id)">
+                                         test
+                                    </ul>
+                                </div>
+                            <li />
+                        </ul>
+                    </div>
+                    <div class="col-md-1">
+
+                    </div>
+                    <div class="col-md-8 transparent">
+                        <h3></h3>
+                    </div>
                 </div>
             </div>
 
