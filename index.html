@@ -28,6 +28,7 @@
             background-position: top;
             background-color: transparent;
             color: rgb(222, 205, 194);
+            cursor: default;
         }
 
         .transparent {
@@ -67,11 +68,39 @@
         .nav-pills > li > a:hover {
             background-color: rgb(92, 92, 96);
             color: rgb(222, 205, 194);
+            cursor: pointer;
         }
 
         .nav-pills > li.active > a:hover {
             background-color: rgb(92, 92, 96);
             color: rgb(222, 205, 194);
+        }
+
+        .topSpace {
+            margin-top: 3rem;
+        }
+
+        .bottomSpace {
+            margin-bottom: 3rem;
+        }
+
+        .noMarginTop {
+            margin-top: 0;
+        }
+
+        .circleContainer {
+            width: 150px;
+            height: 150px;
+        }
+
+        .deux-circle {
+            background-color: rgb(222, 205, 194);
+            height: 75px;
+            width: 150px;
+            -moz-border-radius: 0 0 150px 150px;
+            border-radius: 0 0 150px 150px;
+            position:absolute;
+            bottom:auto;
         }
     </style>
 
@@ -88,24 +117,34 @@
             </nav>
         </header>
 
-        <div></div>
-
         <div class="transparent">
-            <div class="container raw">
-                <div class="col-md-4">
-                    <p>{{nom}}</p>
-                    <p>Tel. : {{telephone}}</p>
-                    <p>{{mail}}</p>
+            <div class="container raw topSpace">
+                <div class="col-md-4 bottomSpace">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <p>{{nom}}</p>
+                        <p>Tel. : {{telephone}}</p>
+                        <p>{{mail}}</p>
+                    </div>
+                    <div class="col-md-1"></div>
                 </div>
-                <div class="col-md-4">
-                    <p>{{adresse}}</p>
-                    <p>{{codePostal}}</p>
-                    <p>{{ville}}</p>
+                <div class="col-md-4 bottomSpace">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <p>{{adresse}}</p>
+                        <p>{{codePostal}}</p>
+                        <p>{{ville}}</p>
+                    </div>
+                    <div class="col-md-1"></div>
                 </div>
-                <div class="col-md-4">
-                    <p>Age : {{age}}</p>
-                    <p>{{permis}}</p>
-                    <p>{{voiture}}</p>
+                <div class="col-md-4 bottomSpace">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <p>Age : {{age}}</p>
+                        <p>{{permis}}</p>
+                        <p>{{voiture}}</p>
+                    </div>
+                    <div class="col-md-1"></div>
                 </div>
             </div>
         </div>
@@ -116,42 +155,24 @@
         <div>
             <div class="transparent">
                 <div class="container raw">
-                    <div class="col-md-3 transparent">
-                        <ul ng-repeat="comp in listeCompetences">
-                            <li>
-                                <div>
-                                    <a ng-click="SelectType(comp.id)">{{comp.nom}}</a>
-                                    <ul ng-show="IsSelectedType(comp.id)">
-                                         test
-                                    </ul>
-                                </div>
-                            <li />
-                        </ul>
+                    <div class="col-md-3">
+                        <nav>
+                            <ul class="nav nav-pills nav-stacked" ng-repeat="comp in listeCompetences">
+                                <li ng-class="active : SelectedTypeCompetence == comp"> <a ng-click="SelectTypeCompetence(comp)">{{comp.nom}}</a>
+                                <li />
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="col-md-1">
-
-                    </div>
-                    <div class="col-md-8 transparent">
-                        <h3></h3>
+                    <div class="col-md-9 transparent noMarginTop">
+                        <h3>{{SelectedTypeCompetence.nom}}</h3>
+                        <div class="circleContainer">
+                            <div class="deux-circle"></div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <div>
-                    <ul>
-                        <li ng-repeat="comp in listeCompetences"><div><div></div><a>{{comp.nom}}</a></div></li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
-        <!--<div id="classiqueContet">
-
-        </div>-->
-        <footer>
-            test
-        </footer>
     </div>
 </body>
 </html>

@@ -1,6 +1,10 @@
 ﻿var app = angular.module('webCvApp', []);
 app.controller('webCvController', function ($scope) {
 
+    $scope.SelectTypeCompetence = function (comp) {
+        $scope.SelectedTypeCompetence = comp;
+    }
+
     $scope.nom = "M. Guillaume PLUVY";
     $scope.telephone = "06-16-56-00-16";
     $scope.mail = "guillaume.pluvy@gmail.com";
@@ -11,7 +15,7 @@ app.controller('webCvController', function ($scope) {
     $scope.permis = "Permis B";
     $scope.voiture = "Possède un voiture";
 
-    
+
     $scope.pages = [
         { id: 0, nom: "Chronologie" },
         { id: 1, nom: "Compétences" },
@@ -22,15 +26,7 @@ app.controller('webCvController', function ($scope) {
 
     $scope.idSelectedCompetence = 0;
 
-    $scope.idSelectedTypeCompetence = 0;
-
-    function IsSelectedType($scope, typeId) {
-        return typeId == $scope.idSelectedTypeCompetence;
-    }
-
-    function Select($scope, typeId) {
-        $scope.idSelectedTypeCompetence = typeId;
-    }
+    $scope.SelectedTypeCompetence;
 
     $scope.isSelectedAnnee = 0;
 
