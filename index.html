@@ -53,7 +53,10 @@
         nav {
             text-align: center;
             padding: 0.5rem;
-            background-color: black;
+        }
+
+        .topNav{
+            background-color:black;
         }
 
         .nav-pills > li.active > a {
@@ -93,6 +96,10 @@
             height: 150px;
         }
 
+        .maxWidth{
+            width:100%;
+        }
+
         .deux-circle {
             background-color: rgb(222, 205, 194);
             height: 75px;
@@ -108,11 +115,11 @@
 <body ng-app="webCvApp" ng-controller="webCvController">
     <div>
         <header>
-            <nav>
+            <nav class="topNav">
                 <ul class="nav nav-pills">
-                    <li class="active"><a href="#">Chronologie</a></li>
-                    <li><a href="#">Compétences</a></li>
                     <li><a href="#">Classique</a></li>
+                    <li class="active"><a href="#">Compétences</a></li>
+                    <li><a href="#">Chronologie</a></li>
                 </ul>
             </nav>
         </header>
@@ -155,19 +162,22 @@
         <div>
             <div class="transparent">
                 <div class="container raw">
-                    <div class="col-md-3">
+                    <div class="col-md-3 transparent noMarginTop">
                         <nav>
-                            <ul class="nav nav-pills nav-stacked" ng-repeat="comp in listeCompetences">
-                                <li ng-class="active : SelectedTypeCompetence == comp"> <a ng-click="SelectTypeCompetence(comp)">{{comp.nom}}</a>
-                                <li />
+                            <ul class="nav nav-pills nav-stacked maxWidth" ng-repeat="type in listeCompetences">
+                                <li ng-class="active : type.selected"> <a ng-click="SelectTypeCompetence(type)">{{type.nom}}</a> <li />
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-md-9 transparent noMarginTop">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-8 transparent noMarginTop">
                         <h3>{{SelectedTypeCompetence.nom}}</h3>
-                        <div class="circleContainer">
-                            <div class="deux-circle"></div>
-                            
+                        <div class="topSpace">
+                            <nav >
+                                <ul class="nav nav-pills" ng-repeat="comp in SelectedTypeCompetence.competences">
+                                    <li><a>{{comp.nom}}</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>

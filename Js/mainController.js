@@ -2,7 +2,11 @@
 app.controller('webCvController', function ($scope) {
 
     $scope.SelectTypeCompetence = function (comp) {
+        if ($scope.SelectedTypeCompetence != null) {
+            $scope.SelectedTypeCompetence.selected = false;
+        }
         $scope.SelectedTypeCompetence = comp;
+        $scope.SelectedTypeCompetence.selected = true;
     }
 
     $scope.nom = "M. Guillaume PLUVY";
@@ -88,8 +92,9 @@ app.controller('webCvController', function ($scope) {
     $scope.listeCompetences = [
         {
             id: 0, nom: "Langages informatiques",
-            competences:
-                [{ id: 0, nom: "C#", niveau: 4 },
+            selected: false,
+            competences: [
+                { id: 0, nom: "C#", niveau: 4 },
                 { id: 1, nom: "C++", niveau: 3 },
                 { id: 2, nom: "Java", niveau: 4 },
                 { id: 3, nom: "C", niveau: 3 },
@@ -111,6 +116,7 @@ app.controller('webCvController', function ($scope) {
         },
         {
             id: 1, nom: "Méthodologies et langages",
+            selected: false,
             competences:
                 [{ id: 0, nom: "Design Pattern", niveau: 4 },
                 { id: 1, nom: "MVVM", niveau: 3 },
@@ -121,6 +127,7 @@ app.controller('webCvController', function ($scope) {
         },
         {
             id: 2, nom: "Outils de génie logiciel",
+            selected: false,
             competences:
                 [{ id: 0, nom: "Visual Studio", niveau: 4 },
                 { id: 1, nom: "Eclipse", niveau: 3 },
@@ -130,6 +137,7 @@ app.controller('webCvController', function ($scope) {
         },
         {
             id: 3, nom: "Base de données",
+            selected: false,
             competences:
                 [{ id: 0, nom: "Oracle", niveau: 4 },
                 { id: 1, nom: "MySql", niveau: 3 },
@@ -139,12 +147,14 @@ app.controller('webCvController', function ($scope) {
         },
         {
             id: 4, nom: "OS et Réseaux",
+            selected: false,
             competences:
                 [{ id: 0, nom: "Windows", niveau: 4 },
                 { id: 1, nom: "Linux", niveau: 3 }]
         },
         {
             id: 5, nom: "Général",
+            selected: false,
             competences:
                 [{ id: 0, nom: "Anglais", niveau: 4 },
                 { id: 1, nom: "Communication", niveau: 3 }]
