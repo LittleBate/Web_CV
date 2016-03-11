@@ -55,8 +55,8 @@
             padding: 0.5rem;
         }
 
-        .topNav{
-            background-color:black;
+        .noTransparent {
+            background-color: black;
         }
 
         .nav-pills > li.active > a {
@@ -96,18 +96,69 @@
             height: 150px;
         }
 
-        .maxWidth{
-            width:100%;
+        .maxWidth {
+            width: 100%;
         }
 
-        .deux-circle {
+        .maxheight {
+            height: 100%;
+        }
+
+        .minHeight {
+            height: 0;
+        }
+
+        .autoHeight {
+            height: auto;
+        }
+
+        .noPadding {
+            padding: 0;
+        }
+
+        .circle {
             background-color: rgb(222, 205, 194);
+            height: 125px;
+            width: 125px;
+            -moz-border-radius: 125px 125px 125px 125px;
+            border-radius: 125px 125px 125px 125px;
+            display: inline-block;
+        }
+
+        .textCenter {
+            text-align: center;
+        }
+
+        .textLevel {
+            color: rgb(92, 92, 96);
+            font-size: 8rem;
+            vertical-align: middle;
+        }
+
+        .circleLeveling {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .level1 {
+            height: 100px;
+        }
+
+        .level2 {
             height: 75px;
-            width: 150px;
-            -moz-border-radius: 0 0 150px 150px;
-            border-radius: 0 0 150px 150px;
-            position:absolute;
-            bottom:auto;
+        }
+
+        .level3 {
+            height: 50px;
+        }
+
+        .level4 {
+            height: 25px;
+        }
+
+        .level5 {
+            height: 0;
         }
     </style>
 
@@ -115,7 +166,7 @@
 <body ng-app="webCvApp" ng-controller="webCvController">
     <div>
         <header>
-            <nav class="topNav">
+            <nav class="noTransparent">
                 <ul class="nav nav-pills">
                     <li><a href="#">Classique</a></li>
                     <li class="active"><a href="#">Compétences</a></li>
@@ -162,22 +213,48 @@
         <div>
             <div class="transparent">
                 <div class="container raw">
-                    <div class="col-md-3 transparent noMarginTop">
+                    <div class="col-md-3 transparent noMarginTop noTransparent">
                         <nav>
                             <ul class="nav nav-pills nav-stacked maxWidth" ng-repeat="type in listeCompetences">
-                                <li ng-class="active : type.selected"> <a ng-click="SelectTypeCompetence(type)">{{type.nom}}</a> <li />
+                                <li ng-class="{active : type == SelectedTypeCompetence}">
+                                    <a ng-click="SelectTypeCompetence(type)">{{type.nom}}</a>
+                                <li />
                             </ul>
                         </nav>
                     </div>
                     <div class="col-md-1"></div>
-                    <div class="col-md-8 transparent noMarginTop">
-                        <h3>{{SelectedTypeCompetence.nom}}</h3>
-                        <div class="topSpace">
-                            <nav >
-                                <ul class="nav nav-pills" ng-repeat="comp in SelectedTypeCompetence.competences">
-                                    <li><a>{{comp.nom}}</a></li>
-                                </ul>
-                            </nav>
+                    <div class="col-md-8 noMarginTop noTransparent maxheight">
+                        <div ng-show="SelectedTypeCompetence != null">
+                            <h3>{{SelectedTypeCompetence.nom}}</h3>
+                            <div>
+                                <nav>
+                                    <ul class="nav nav-pills" ng-repeat="comp in SelectedTypeCompetence.competences">
+                                        <li><a ng-click="SelectCompetence(comp)">{{comp.nom}}</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="noMarginTop" ng-show="SelectedCompetence != null">
+                            <div class="raw">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <h2 class="textCenter">{{SelectedCompetence.nom}}</h2>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <div class="raw">
+                                <div class="col-md-8">
+
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-3 textCenter noPadding">
+                                    <div class="circle">
+                                        <div class="circleLeveling">
+                                            <p class="textLevel">{{SelectedCompetence.niveau}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
